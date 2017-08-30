@@ -64,6 +64,8 @@ import java.util.NoSuchElementException;
 public class Graph {
     private static final String NEWLINE = System.getProperty("line.separator");
 
+    //for TP1 we add the typeName of the graph
+    private String typeName;
     private final int V;
     private int E;
     private Bag<Integer>[] adj;
@@ -235,6 +237,14 @@ public class Graph {
         Graph G = new Graph(in);
         StdOut.println(G);
     }
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 
 }
 
