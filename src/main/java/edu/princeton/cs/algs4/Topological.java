@@ -1,5 +1,5 @@
 /******************************************************************************
- *  Compilation:  javac Topoological.java
+ *  Compilation:  javac Topological.java
  *  Execution:    java  Topological filename.txt delimiter
  *  Dependencies: Digraph.java DepthFirstOrder.java DirectedCycle.java
  *                EdgeWeightedDigraph.java EdgeWeightedDirectedCycle.java
@@ -13,17 +13,16 @@
  *  Calculus
  *  Linear Algebra
  *  Introduction to CS
- *  Programming Systems
+ *  Advanced Programming
  *  Algorithms
  *  Theoretical CS
  *  Artificial Intelligence
+ *  Robotics
  *  Machine Learning
  *  Neural Networks
- *  Robotics
+ *  Databases
  *  Scientific Computing
  *  Computational Biology
- *  Databases
- *
  *
  ******************************************************************************/
 
