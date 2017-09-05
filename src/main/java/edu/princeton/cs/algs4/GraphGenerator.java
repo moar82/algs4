@@ -73,6 +73,7 @@ public class GraphGenerator {
                 G.addEdge(v, w);
             }
         }
+        G.setTypeName("simple");
         return G;
     }
 
@@ -94,6 +95,7 @@ public class GraphGenerator {
             for (int w = v+1; w < V; w++)
                 if (StdRandom.bernoulli(p))
                     G.addEdge(v, w);
+        G.setTypeName("simple");
         return G;
     }
 
@@ -104,7 +106,7 @@ public class GraphGenerator {
      */
     public static Graph complete(int V) {
     	Graph mygraph = simple(V, 1.0);
-    	mygraph.setTypeName("simple");
+    	mygraph.setTypeName("complete");
         return mygraph;
     }
 
@@ -117,7 +119,7 @@ public class GraphGenerator {
      */
     public static Graph completeBipartite(int V1, int V2) {
     	Graph mygraph = bipartite(V1, V2, V1*V2);
-    	mygraph.setTypeName("simple");
+    	mygraph.setTypeName("completeBipartite");
         return mygraph;
     }
 
@@ -378,6 +380,7 @@ public class GraphGenerator {
     public static Graph tree(int V) {
         Graph G = new Graph(V);
 
+        G.setTypeName("tree");
         // special case
         if (V == 1) return G;
 
@@ -410,7 +413,6 @@ public class GraphGenerator {
             if (degree[prufer[i]] == 1) pq.insert(prufer[i]);
         }
         G.addEdge(pq.delMin(), pq.delMin());
-        G.setTypeName("tree");
         return G;
     }
 
